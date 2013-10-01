@@ -1,0 +1,85 @@
+import java.util.Scanner; 
+import java.util.Random; 
+
+public class Labf3 {
+
+    public static void main(String[] args) {
+
+        
+        int Y;
+        int play = 1;
+        
+        Random objRandom = new Random();
+        
+        Scanner input = new Scanner( System.in );
+
+        
+        while (play == 1) {
+
+            System.out.printf( "%s\n","Welcome to Rock/Paper/Scissors!");
+            System.out.printf( "%s\n\n","Rock (1)   Paper (2)   Scissors (3)");
+
+            
+            Y = input.nextInt();
+
+            
+            if (Y <= 0 || Y >= 4) {
+                System.out.printf( "%s\n\n","You did not select rock, paper or scissors! Try again!");
+            }
+            else {
+                
+                int x = 1 + objRandom.nextInt(3);
+
+                
+                if (x == 1) {
+                    
+                    if (Y == 1) {
+                        System.out.printf("It's a DRAW, the computer picked rock \n \n");
+                    }
+                    
+                    else if (x == 2) {
+                        System.out.printf("Your VICTORIOUS, the computer picked rock \n \n");
+                    }
+                    
+                    else {
+                        System.out.printf("You Lose, the computer picked rock \n \n");
+                    }
+                }
+
+
+                
+                if (x == 2) {
+                    
+                    if (Y == 1) {
+                        System.out.printf("You lose, the computer picked paper \n \n");
+                    }
+                    
+                    else if (x == 2) {
+                        System.out.printf("It's a DRAW, the computer picked paper \n \n");
+                    }
+                    
+                    else {
+                        System.out.printf("You VICTORIOUS, the computer picked paper \n \n");
+                    }
+                }
+
+
+                
+                if (x == 3) {
+                    
+                    if (Y == 1) {
+                        System.out.printf("Your VICTORIOUS, the computer picked scissors \n \n");
+                    }
+                    
+                    else if (x == 2) {
+                        System.out.printf("You lose, the computer picked scissors \n \n");
+                    }
+                    
+                    else {
+                        System.out.printf("It's a DRAW, the computer picked scissors \n \n");
+                    }
+                }
+             }
+         }
+     }
+}
